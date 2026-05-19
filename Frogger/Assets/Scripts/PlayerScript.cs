@@ -36,4 +36,12 @@ public class PlayerScript : MonoBehaviour
             transform.position -= new Vector3(0, speed, 0);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D playerCollision)
+    {
+        if (playerCollision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
