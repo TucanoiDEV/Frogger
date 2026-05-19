@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CarScript : MonoBehaviour
+public class LogScript : MonoBehaviour
 {
     public float speed;
     public bool isMovingRight;
@@ -14,7 +14,7 @@ public class CarScript : MonoBehaviour
 
     void Movement()
     {
-        if(isMovingRight == true)
+        if (isMovingRight == true)
         {
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
@@ -26,13 +26,13 @@ public class CarScript : MonoBehaviour
 
     void Respawn()
     {
-        if(transform.position.x > 10 && isMovingRight == true)
+        if (transform.position.x > 25 && isMovingRight == true)
         {
-            transform.position = new Vector2(-10, transform.position.y);
+            transform.position = new Vector2(-25, transform.position.y);
         }
-        if (transform.position.x < -10 && isMovingRight == false)
+        if (transform.position.x < -25 && isMovingRight == false)
         {
-            transform.position = new Vector2(10, transform.position.y);
+            transform.position = new Vector2(25, transform.position.y);
         }
     }
 }
