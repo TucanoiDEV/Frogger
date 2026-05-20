@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d581d58bcbfe1104aa86c2efb9c00547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarScript
-  speed: 8
+  speed: 3
   isMovingRight: 0
 --- !u!61 &3787855042344517897
 BoxCollider2D:
