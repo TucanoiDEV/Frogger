@@ -6,8 +6,6 @@ public class PlayerScript : MonoBehaviour
 {
     public int speed;
 
-    private Rigidbody2D rb;
-
     public AudioSource audioMovement;
     public AudioSource audioDeath;
 
@@ -18,7 +16,6 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
