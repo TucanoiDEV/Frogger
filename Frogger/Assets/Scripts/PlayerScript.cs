@@ -71,6 +71,7 @@ public class PlayerScript : MonoBehaviour
         if (playerCollision.gameObject.CompareTag("Log"))
         {
             isSafe = true;
+            transform.parent = playerCollision.transform;
         }
 
         if (playerCollision.gameObject.CompareTag("Enemy") && isSafe == false)
@@ -82,6 +83,7 @@ public class PlayerScript : MonoBehaviour
     private void OnCollisionExit2D(Collision2D playerCollision)
     {
        isSafe = false;
+       transform.parent = null;
     }
     private void OnTriggerStay2D(Collider2D playerCollision)
     {
