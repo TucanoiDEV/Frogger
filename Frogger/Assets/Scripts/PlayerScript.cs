@@ -70,9 +70,9 @@ public class PlayerScript : MonoBehaviour
             isSafe = true;
             transform.parent = playerCollision.transform;
         }
-
-        if (playerCollision.gameObject.CompareTag("Enemy") && isSafe == false)
+        if (playerCollision.gameObject.CompareTag("Enemy") && isDead == false)
         {
+            isDead = true;
             audioDeath.Play();
             animator.SetTrigger("deathTrigger");
         }
@@ -102,6 +102,8 @@ public class PlayerScript : MonoBehaviour
 
     void Death()
     {
-        Destroy(gameObject);
+        transform.position = new Vector2(0, -4.5f);
+        speed = 1;
+        isDead = false;
     }
 }

@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Car
+  - Enemy
+  - Log
+  - Water
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
