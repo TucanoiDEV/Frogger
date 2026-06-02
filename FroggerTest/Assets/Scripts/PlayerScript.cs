@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private bool isSafe;
     [SerializeField] private bool isDead = false;
 
+    public int points = 0;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -59,11 +61,13 @@ public class PlayerScript : MonoBehaviour
         }
         if (playerCollision.gameObject.CompareTag("Enemy") && isDead == false)
         {
+            points -= 100;
             isDead = true;
             animator.SetTrigger("deathTrigger");
         }
         if(playerCollision.gameObject.CompareTag("Checkpoint"))
         {
+            points += 100;
             Respawn();
         }
     }
